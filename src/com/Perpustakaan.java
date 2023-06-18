@@ -3,7 +3,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class Perpustakaan {
+public class Perpustakaan implements Kegiatan {
     private List<Buku> buku;
     private int jumlahBuku;
 
@@ -12,16 +12,18 @@ public class Perpustakaan {
         jumlahBuku = 0;
     }
 
-    private void tambahBuku(Buku tBuku) {
+    public void tambahBuku(Buku tBuku) {
         buku.add(tBuku);
         jumlahBuku++;
     }
 
-    private int getJumlahBuku() {
+    
+
+    public int getJumlahBuku() {
         return jumlahBuku;
     }
 
-    private void displayBukus() {
+    public void displayBuku() {
         System.out.println("List Buku Yang Kamu Pinjam :");
         for (Buku Buku : buku) {
             System.out.println("- " + Buku.getNama() + " (" + Buku.getKategori() + ")");
@@ -29,9 +31,19 @@ public class Perpustakaan {
         System.out.println();
     }
 
+
+    public void displayBuku(int jumlahBuku, String borrowerName){
+        System.out.println("----------------------------");
+        System.out.println("Nama : " + borrowerName + "\n");
+        displayBuku();
+        System.out.println("Total Meminjam Buku: " + jumlahBuku + "\n");
+        System.out.println("------- Terima Kasih -------");
+
+    }
+
+
     public void menampilkanMenu(String borrowerName) {
         Scanner scanner = new Scanner(System.in);
-
         while (true) {
             System.out.println("\nPilihlah Option Berikut : :");
             System.out.println("1. Menambahkan Buku Fiksi");
@@ -68,7 +80,7 @@ public class Perpustakaan {
 
                 System.out.println(namaBuku + " Telah Di Tambahkan!\n");
             } else if (option == 3) {
-                displayBukus();
+                displayBuku();
             } else if (option == 4) {
                 break;
             } else {
@@ -76,8 +88,7 @@ public class Perpustakaan {
             }
         }
 
-        System.out.println("Nama : " + borrowerName);
-        System.out.println("Total Pinjam Buku: " + getJumlahBuku());
+       displayBuku(jumlahBuku, borrowerName);
     }
 }
 

@@ -1,4 +1,3 @@
-
 package com;
 public class BukuFiksi extends Buku {
     private String author;

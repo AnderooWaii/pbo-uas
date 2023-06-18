@@ -1,6 +1,4 @@
-
 package com;
-
 public abstract class Buku {
     protected String nama;
     protected String kategori;
