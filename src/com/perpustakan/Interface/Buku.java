@@ -1,4 +1,4 @@
-package com;
+package com.perpustakan.Interface;
 public abstract class Buku {
     protected String nama;
     protected String kategori;

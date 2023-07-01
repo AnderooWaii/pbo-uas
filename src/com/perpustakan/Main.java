@@ -1,5 +1,7 @@
-package com;
+package com.perpustakan;
 import java.util.Scanner;
+
+import com.perpustakan.proses.Perpustakaan;
 
 public class Main {
     public static void main(String[] args) {
@@ -11,6 +13,6 @@ public class Main {
         String nama = scanner.nextLine();
 
         Perpustakaan perpustakaan = new Perpustakaan();
-        perpustakaan.menampilkanMenu(nama);
+        perpustakaan.menampilkanOpsi(nama);
     }
 }

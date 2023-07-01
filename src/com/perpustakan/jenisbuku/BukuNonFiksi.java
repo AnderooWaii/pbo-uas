@@ -1,5 +1,8 @@
 
-package com;
+package com.perpustakan.jenisbuku;
+
+import com.perpustakan.Interface.Buku;
+
 public class BukuNonFiksi extends Buku {
     private String topic;
 

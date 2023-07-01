@@ -1,7 +1,11 @@
-package com;
+package com.perpustakan.proses;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+
+import com.perpustakan.Interface.*;
+import com.perpustakan.jenisbuku.BukuFiksi;
+import com.perpustakan.jenisbuku.BukuNonFiksi;
 
 public class Perpustakaan implements Kegiatan {
     private List<Buku> buku;
@@ -17,7 +21,6 @@ public class Perpustakaan implements Kegiatan {
         jumlahBuku++;
     }
 
-    
 
     public int getJumlahBuku() {
         return jumlahBuku;
@@ -42,7 +45,7 @@ public class Perpustakaan implements Kegiatan {
     }
 
 
-    public void menampilkanMenu(String borrowerName) {
+    public void menampilkanOpsi(String borrowerName) {
         Scanner scanner = new Scanner(System.in);
         while (true) {
             System.out.println("\nPilihlah Option Berikut : :");
@@ -52,10 +55,10 @@ public class Perpustakaan implements Kegiatan {
             System.out.println("4. Selesaikan Pinjaman");
 
             System.out.println("Masukan Angka Sesuai Dengan Pilihanmu : ");
-            int option = scanner.nextInt();
+            String opsi = scanner.next();
             scanner.nextLine(); // Consume the newline character
 
-            if (option == 1) {
+            if (opsi.equals("1")) {
                 System.out.print("Tuliskan Nama buku: ");
                 String namaBuku = scanner.nextLine();
                 System.out.print("Tuliskan Category Buku: ");
@@ -67,7 +70,7 @@ public class Perpustakaan implements Kegiatan {
                 tambahBuku(Buku);
 
                 System.out.println(namaBuku + " Telah Di Tambahkan!\n");
-            } else if (option == 2) {
+            } else if (opsi.equals("2")) {
                 System.out.print("Tuliskan Nama buku: ");
                 String namaBuku = scanner.nextLine();
                 System.out.print("Tuliskan Category Buku: ");
@@ -79,9 +82,9 @@ public class Perpustakaan implements Kegiatan {
                 tambahBuku(Buku);
 
                 System.out.println(namaBuku + " Telah Di Tambahkan!\n");
-            } else if (option == 3) {
+            } else if (opsi.equals("3")) {
                 displayBuku();
-            } else if (option == 4) {
+            } else if (opsi.equals("4")) {
                 break;
             } else {
                 System.out.println("Opsi Salah, Silahkan Ulang Kembali\n");

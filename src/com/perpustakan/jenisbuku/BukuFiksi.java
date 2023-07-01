@@ -1,4 +1,7 @@
-package com;
+package com.perpustakan.jenisbuku;
+
+import com.perpustakan.Interface.Buku;
+
 public class BukuFiksi extends Buku {
     private String author;
 
