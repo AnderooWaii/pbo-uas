@@ -3,11 +3,11 @@ package com.perpustakan.jenisbuku;
 import com.perpustakan.Interface.Buku;
 
 public class BukuFiksi extends Buku {
-    private String author;
+    private String jenisCerita;
 
-    public BukuFiksi(String nama, String kategori, String author) {
+    public BukuFiksi(String nama, String kategori, String jenisCerita) {
         super(nama, kategori);
-        this.author = author;
+        this.jenisCerita = jenisCerita;
     }
 
     @Override
@@ -15,7 +15,7 @@ public class BukuFiksi extends Buku {
         System.out.println("Fiction Buku:");
         System.out.println("Name: " + nama);
         System.out.println("Category: " + kategori);
-        System.out.println("Author: " + author);
+        System.out.println("Jenis Cerita: " + jenisCerita);
         System.out.println();
     }
 }

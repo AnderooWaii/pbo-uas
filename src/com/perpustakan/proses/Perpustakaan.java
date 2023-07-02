@@ -63,10 +63,10 @@ public class Perpustakaan implements Kegiatan {
                 String namaBuku = scanner.nextLine();
                 System.out.print("Tuliskan Category Buku: ");
                 String kategoriBuku = scanner.nextLine();
-                System.out.print("Tuliskan Author Buku: ");
-                String author = scanner.nextLine();
+                System.out.print("Tuliskan Jenis Cerita : ");
+                String jenisCerita = scanner.nextLine();
 
-                Buku Buku = new BukuFiksi(namaBuku, kategoriBuku, author);
+                Buku Buku = new BukuFiksi(namaBuku, kategoriBuku, jenisCerita);
                 tambahBuku(Buku);
 
                 System.out.println(namaBuku + " Telah Di Tambahkan!\n");
